@@ -1,0 +1,1 @@
+objem = int(input("Objem dat: " ))
