@@ -1,5 +1,6 @@
 import math
-vyska= int(input("Výška Válce: "))
-polomer= int(input("Polomer Válce: "))
-vysledek = math.pi*vyska*polomer** 2+10
-print(f"Objem je", vysledek)
+height = float(input("Výška válce v cm: "))
+radius = float(input("Poloměr válce v cm: "))
+result = int(math.pi*radius**2*height)
+roundedoff = round(result,2)
+print(f"Výsledkem je: {roundedoff} cm³.")
