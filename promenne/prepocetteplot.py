@@ -1,6 +1,6 @@
 import math
 
-c = float(input("Hodntoa teplot v C: "))
+c = float(input("Hodntoa teploty (C): "))
 prevodF = c*9/5 + 32
 prevodK = c + 273.15
 roundoffF = round(prevodF, 2)

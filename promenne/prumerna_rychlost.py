@@ -1,6 +1,6 @@
 import math 
 
-vzdalenost_km = float(input("Zadejte ujetou vzdálenost v kilometrech: "))
+vzdalenost_km = float(input("Zadejte ujetou vzdálenost (km): "))
 hodiny = int(input("Zadejte počet hodin: "))
 minuty = int(input("Zadejte počet minut: "))
 celkovy_cas = hodiny + minuty/60
