@@ -15,11 +15,3 @@ elif x <= 0 and y <= 0:
 else:
     print("Bod A se nachází v IV kvadrantu")
 
-
-
-
-
-
-
-
-

@@ -12,7 +12,7 @@ if D > 0:
     print(f"Kořeny rovnice jsou {x1}, {x2}")
 
 elif D == 0:
-    print(f"Kořeny rovnice jsou {x1}, {x2}")
+    print(f"Rovnice má jedno řešení {x1}")
 
 else:
     D < 0
