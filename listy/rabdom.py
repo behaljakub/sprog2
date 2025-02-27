@@ -1,11 +1,11 @@
-l = [2, 3, 1, 0, 5, 6, 4, 2]  # Seznam čísel
-target = int(input("Zadej číslo, které chceš najít: "))  # Uživatelský vstup
-misto = []  # Seznam pro indexy
-index = 0  # Počáteční index
+l = [2, 3, 1, 0, 5, 6, 4, 2]
+target = (input("Zadej číslo, které chceš najít: "))
+misto = []
+index = 0
 
-for i in l:  # Procházení seznamu
-    if i == target:  # Pokud je prvek rovný hledanému číslu
-        misto.append(index)  # Přidáme jeho index do seznamu
-    index += 1  # Posuneme index o 1
+for i in l:
+    if i == target:
+        misto.append(index)
+    index += 1 
 
 print("Číslo", target, "se nachází na indexech:", misto)
