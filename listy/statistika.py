@@ -20,8 +20,6 @@ soucet = 0
 for k in cislo:
     soucet += k
 
-
-
 print(soucet/len(cislo))
 
 
