@@ -6,12 +6,18 @@ abc = ['a', "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"
 vysledek = []
 
 for x in range(len(text)):
-    pismeno = text[x]
-    for y in range(len(abc)):
-        if pismeno == abc[y]:
-            vysledek += abc[y + key]
+    if x in abc:
+        for i in range(len(abc)):
+            if x == abc[(i+key)%len(abc)]:
+                text += vysledek
 
-print(str(vysledek))
+prevod_na_string = "".join(vysledek)
+
+print(str(prevod_na_string))
+
+
+#desifrace
+
 
 
 
