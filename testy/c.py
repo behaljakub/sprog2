@@ -51,7 +51,7 @@ else:
     soucet_spol = 0
     for u in spolecna_cisla:
         soucet_spol += u
-        print(f"Součet společných čísel: {soucet_spol}")
+    print(f"Součet společných čísel: {soucet_spol}")
 
 #Průměr hodnot
 soucet = 0
