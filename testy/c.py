@@ -5,8 +5,8 @@ delka = int(input("Zadej délku seznamu: "))
 cisla = []
 
 for i in range(delka):
-    cislo = random.randint(1, 100)
-    cisla.append(cislo)
+    x = random.randint(1, 100)
+    cisla.append(x)
 
 print(f"První (náhodný) seznam: {cisla}")
 
@@ -22,9 +22,9 @@ print(f"Druhý (uživatelský) seznam: {a}")
 #Zjištění spolčných čísel a počtu           
 spolecna_cisla = []
 count_spol = 0
-for cislo in cisla:
-    if cislo in a:
-        spolecna_cisla.append(cislo)
+for x in cisla:
+    if x in a:
+        spolecna_cisla.append(x)
         count_spol += 1
 
 if count_spol == 0:
@@ -51,7 +51,7 @@ else:
     soucet_spol = 0
     for u in spolecna_cisla:
         soucet_spol += u
-        print(f"Součet společných čísel: {soucet_spol}")
+    print(f"Součet společných čísel: {soucet_spol}")
 
 #Průměr hodnot
 soucet = 0

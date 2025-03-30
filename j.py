@@ -1,27 +1,46 @@
 import random
 
-# Načtení délky seznamu od uživatele
 delka = int(input("Zadej délku seznamu: "))
 
-# Vytvoření prázdného seznamu
 cisla = []
 
-# Naplnění seznamu náhodnými čísly
 for i in range(delka):
-    cislo = random.randint(1, 10)
-    cisla.append(cislo)
+    x = random.randint(1, 100)
+    cisla.append(x)
 
-# Výstup seznamu
-print("Vygenerovaný seznam:", cisla)
+print(f"První (náhodný) seznam: {cisla}")
 
-target = int(input("Zadejte cislo k hledání: "))
+c1 = int(input("Zadejte 1. číslo: "))
+c2 = int(input("Zadejte 2. číslo: "))
+#c3 = int(input("Zadejte 3. číslo: "))
+#c4 = int(input("Zadejte 4. číslo: "))
+#c5 = int(input("Zadejte 5. číslo: "))
+a = [c1, c2,]
+
+print(f"Druhý (uživatelský) seznam: {a}")
+
+spolc = []
 index = 0
-retezec = []
 
 for x in cisla:
-    if x == target:
-        retezec.append(index)
-    index += 1
+    if x in a:
+        spolc.append(x)
+        index += 1
 
-print(f"Cislo {target} se nachází na indexech {retezec}")
+if index == 0:
+    print("Není")
+else:
+    print(spolc)
+    print(index)
+
+    maxn = spolc[0]
+    minn = spolc[0]
+
+    for z in spolc:
+        if z > maxn:
+            maxn = z
+    print(maxn)
+
+
+
 
