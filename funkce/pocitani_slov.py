@@ -1,6 +1,5 @@
 def pocitani_slov(text, min_delka=3):
     slovnik = {}
-    
     text = text.lower()
     interpunkce = ".,!?;:"
     for znak in interpunkce:
