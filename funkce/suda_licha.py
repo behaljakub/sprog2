@@ -7,4 +7,4 @@ def vypis_suda_od_do(zacatek, konec):
 
 vysledek = vypis_suda_od_do(4, 12)
 
-print(vysledek)
+

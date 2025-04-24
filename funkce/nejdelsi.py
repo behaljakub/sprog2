@@ -6,4 +6,11 @@ def nejdelsi_slovo(text):
             nejdelsi = x
     return nejdelsi
 
-print(nejdelsi_slovo("Včera jsme šli na výlet do hor"))  # "Včera"
+
+def nejdelsi_slovov2(text):
+    slova = text.split()
+    return max(slova, key=len)
+
+print(nejdelsi_slovov2("Včera jsme šli na výlet do hor"))
+
+
