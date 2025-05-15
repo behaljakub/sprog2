@@ -4,7 +4,8 @@ def pocitani_slov(text, min_delka=3):
     interpunkce = ".,!?;:"
     for znak in interpunkce:
         text = text.replace(znak, "")
-    
+
+
     slova = text.split()
     
 
@@ -16,6 +17,9 @@ def pocitani_slov(text, min_delka=3):
                 slovnik[slovo] = 1
     
     return slovnik
+
+    
+
 
 print(pocitani_slov("Python je skvělý, Python je mocný programovací jazyk."))
 
