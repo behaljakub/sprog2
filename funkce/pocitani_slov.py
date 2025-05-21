@@ -18,9 +18,6 @@ def pocitani_slov(text, min_delka=3):
     
     return slovnik
 
-    
-
-
 print(pocitani_slov("Python je skvělý, Python je mocný programovací jazyk."))
 
 print(pocitani_slov("Ahoj jak se máš", min_delka=4))
