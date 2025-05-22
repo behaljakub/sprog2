@@ -4,7 +4,8 @@ def pocitani_slov(text, min_delka=3):
     interpunkce = ".,!?;:"
     for znak in interpunkce:
         text = text.replace(znak, "")
-    
+
+
     slova = text.split()
     
 

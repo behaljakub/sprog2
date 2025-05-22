@@ -1,7 +1,7 @@
 delka1 = int(input("Zadejte délku seznamu: "))
-seznam = []
+seznam1 = []
 for x in range(delka1):
-    seznam.append(int(input(f"Zadej {x + 1} pro první seznam: ")))
+    seznam1.append(int(input(f"Zadej {x + 1} pro první seznam: ")))
 
 delka2 = int(input("Zadejte délku seznamu: "))
 seznam2 = []
@@ -12,7 +12,7 @@ for y in range(delka2):
 spojeno = []
 for i in range(max(delka1, delka2)):
     if(i < delka1):
-        spojeno.append(seznam[i])
+        spojeno.append(seznam1[i])
     if(i < delka2):
         spojeno.append(seznam2[i])
 
