@@ -8,7 +8,7 @@ def uziv_slovo(slovo):
 
 
 
-    for x in range(1, 100):
+    for x in range (len(znaky)):
         poz1 = random.randint(0, len(slovo) - 1)
         poz2 = random.randint(0, len(slovo) - 1)
 
