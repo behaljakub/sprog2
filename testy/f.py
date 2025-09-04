@@ -1,6 +1,5 @@
 import random
 
-
 def uziv_slovo(slovo):
     znaky = []
     for znak in slovo:
