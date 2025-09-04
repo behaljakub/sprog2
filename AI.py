@@ -11,8 +11,6 @@ def costf(k):
 for i in range(-5, 6, 1):
     print(f"k: {i}, Cost func. je: {costf(i)}")
 
-
-def derivace(k):
     
 
 
