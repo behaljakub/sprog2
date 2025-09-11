@@ -1,23 +1,35 @@
-def bubble_v3(n):
-    count3 = 0 
-    swapped = False
-    for x in range(0, len(n) - 1):
-        end = len(n) - 1
-        if x == end - 1:
-            if n[x] <= n[x+1]:
-                end -= 1
-                break 
-        for y in range(0, len(n) - 1):
-            count3 += 1
-            if n[y] > n[y+1]:
-                temp = n[y]
-                n[y] = n[y+1]
-                n[y+1] = temp
-                swapped = True
-        
-    if not swapped:
-        swapped = False
+def bubblev4(n):
+    start = 0 
+    end =  len(n) - 1
+    count = 0
 
-    return n, count3
-seznam = [5, 1, 6, 2, 4]
-print(bubble_v3(seznam))
+    for z in range(10000):
+        swapped = False
+        for x in range(start, end):
+            if n[x] > n[x+1]:
+                temp = n[x]
+                n[x] = n[x+1]
+                n[x+1] = temp
+                swapped = True
+                count += 1
+        if not swapped:
+            break
+        end -= 1
+
+        swapped = False
+        for i in range(end, start, -1):
+            if n[i] < n[i - 1]:
+                temp2 = n[i]
+                n[i] = n[i-1]
+                n[i-1] = temp2
+                swapped = True
+                count += 1
+        if not swapped:
+            break
+        start += 1
+
+    return count
+
+arr = [5, 3, 4, 1, 2]
+print(bubblev4(arr))
+

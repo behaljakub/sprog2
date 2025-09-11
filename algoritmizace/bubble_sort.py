@@ -49,13 +49,43 @@ def bubble_v3(n):
         swapped = False
 
     return count3
+def bubble_v4(n):
+    start = 0 
+    end =  len(n) - 1
+    count = 0
+
+    for z in range(10000):
+        swapped = False
+        for x in range(start, end):
+            if n[x] > n[x+1]:
+                temp = n[x]
+                n[x] = n[x+1]
+                n[x+1] = temp
+                swapped = True
+                count += 1
+        if not swapped:
+            break
+        end -= 1
+
+        swapped = False
+        for i in range(end, start, -1):
+            if n[i] < n[i - 1]:
+                temp2 = n[i]
+                n[i] = n[i-1]
+                n[i-1] = temp2
+                swapped = True
+                count += 1
+        if not swapped:
+            break
+        start += 1
+
+    return count
 
 def measure_sorts():
     unsorted_list = []
     for i in range(1000):
         x = random.randint(0, 100)
         unsorted_list.append(x)
-    print(unsorted_list)
     list_copy = copy.deepcopy(unsorted_list)
 
     time_start = time.perf_counter()
@@ -86,6 +116,16 @@ def measure_sorts():
     execution_time = time_end - time_start
 
     print(f"Bubble v3 - pocet porovnani: {comparisons}, cas: {execution_time}")
+
+    list_copy = copy.deepcopy(unsorted_list)
+
+    time_start = time.perf_counter()
+    comparisons = bubble_v4(list_copy)
+    time_end = time.perf_counter()
+
+    execution_time = time_end - time_start
+
+    print(f"Bubble v4 - pocet porovnani: {comparisons}, cas: {execution_time}")
 
 measure_sorts()
 
