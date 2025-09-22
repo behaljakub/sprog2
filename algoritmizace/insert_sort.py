@@ -1,15 +1,18 @@
-seznam = [23, 1, 10, 5, 2]
+import random
+import copy
+import time
 
-for x in range(1):
-    if seznam[x+1] < seznam[x]:
-        temp = seznam[x]
-        seznam[x] = seznam[x+1]
-        seznam[x+1] = temp
-        for i in range(1):
-            if seznam[i+2] < seznam[i+1]:
-                temp1 = seznam[i+1]
-                seznam[i+1] = seznam[i+2]
-                seznam[i+2] = temp1
-print(seznam)
+def insertion_sort(seznam):
+    for x in range(1, len(seznam)):
+        key = seznam[x]
+        j = x - 1
+        while j >= 0 and seznam[j] > key:
+            seznam[j + 1] = seznam[j]
+            j -= 1
+        seznam[j + 1] = key
+    return seznam
+
+print(insertion_sort([5, 5, 4, 1, 2]))
+
 
 
