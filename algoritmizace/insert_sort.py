@@ -14,19 +14,3 @@ def insertion_sort(seznam):
         seznam[j + 1] = key
     return steps
 
-
-
-def measure_sorts():
-    unsorted_list = []
-    for i in range(1000):
-        x = random.randint(0, 100)
-        unsorted_list.append(x)
-    list_copy = copy.deepcopy(unsorted_list)
-
-    time_start = time.perf_counter()
-    comparisons = insertion_sort(list_copy)
-    time_end = time.perf_counter()
-
-    execution_time = time_end - time_start
-
-    print(f"InsertionSort - pocet porovnani: {comparisons}, cas: {execution_time}")
