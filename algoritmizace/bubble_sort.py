@@ -2,6 +2,7 @@ import copy
 import random
 import time
 
+
 def bubble_v1(n):
     count = 0
     for x in range(0, len(n)):
