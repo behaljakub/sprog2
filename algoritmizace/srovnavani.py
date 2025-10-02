@@ -7,7 +7,6 @@ from bubble_sort import bubble_v3
 from bubble_sort import bubble_v4
 from insert_sort import insertion_sort
 from selection_sort import selection_sort
-import matplotlib.pyplot as plt
 
 
 def measure_sorts():
@@ -33,19 +32,5 @@ def measure_sorts():
         insertion_sort_res.append(insertion_sort(copy.deepcopy(unsorted_list)))
 
         selection_sort_res.append(selection_sort(copy.deepcopy(unsorted_list)))
-
-
-    plt.plot(lists_lens, bubble_v1_res, label = "bubbleV1", color="red")
-    plt.plot(lists_lens, bubble_v2_res, label = "bubbleV2", color="blue")
-    #plt.plot(lists_lens, bubble_v3_res, label = "bubbleV3", color="green") #chyba
-    plt.plot(lists_lens, bubble_v4_res, label = "bubbleV4", color="cyan")
-
-    
-
-    
-
-
-    plt.legend()
-    plt.show()
 
 measure_sorts()
