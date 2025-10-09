@@ -9,4 +9,4 @@ def bubble_v3(n):
                 n[j] = n[j+1]
                 n[j+1] = temp
     
-    return count
+    return n, count
