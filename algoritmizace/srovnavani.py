@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 
 def measure_sorts():
-    lists_lens = [x for x in range(10, 1000, 150)]
+    lists_lens = [x for x in range(10, 1000, 300)]
     bubble_v1_res = []
     bubble_v2_res = []
     bubble_v3_res = []
@@ -21,7 +21,7 @@ def measure_sorts():
     selection_sort_res = []
     shell_sort_res = []
 
-    for x in range(10, 1000, 150):
+    for x in range(10, 1000, 300):
         unsorted_list = [random.randint(0, x**2) for i in range(x)]
 
         bubble_v1_res.append(bubble_v1(copy.deepcopy(unsorted_list)))
@@ -46,8 +46,11 @@ def measure_sorts():
     plt.plot(lists_lens, bubble_v4_res, label = "bubbleV4", color="#FFFB00")
     plt.plot(lists_lens, insertion_sort_res, label = "insertion", color="#0400FF")
     plt.plot(lists_lens, selection_sort_res, label = "selection", color="#00C3FF")
-    plt.plot(lists_lens, shell_sort_res, label = "shell", color="#A3EAFF")
+    plt.plot(lists_lens, shell_sort_res, label = "shell", color="#00FF9D")
 
+
+    plt.xlabel("Velikost vstupu")
+    plt.ylabel("Output")
     plt.legend()
     plt.show()
 
