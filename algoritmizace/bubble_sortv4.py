@@ -20,8 +20,8 @@ def bubble_v4(n):
         for i in range(end, start, -1):
             if n[i] < n[i - 1]:
                 temp = n[i]
-                n[i] = n[i+1]
-                n[i+1] = temp
+                n[i] = n[i-1]
+                n[i-1] = temp
                 swapped = True
                 count += 1
         start += 1
@@ -30,3 +30,4 @@ def bubble_v4(n):
             break
 
     return count
+
