@@ -7,6 +7,7 @@ from bubble_sortv3 import bubble_v3
 from bubble_sortv4 import bubble_v4
 from insert_sort import insertion_sort
 from selection_sort import selection_sort
+from shell_sort import shell_sort
 
 def measure_sorts():
     unsorted_list = []
@@ -74,5 +75,16 @@ def measure_sorts():
     execution_time = time_end - time_start
 
     print(f"Selection Sort - pocet porovnani: {comparisons}, cas: {execution_time}")
+
+
+    list_copy = copy.deepcopy(unsorted_list)
+
+    time_start = time.perf_counter()
+    comparisons = shell_sort(list_copy)
+    time_end = time.perf_counter()
+
+    execution_time = time_end - time_start
+
+    print(f"Shell Sort - pocet porovnani: {comparisons}, cas: {execution_time}")
 
 measure_sorts()

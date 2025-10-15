@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 
 def measure_sorts():
-    lists_lens = [x for x in range(10, 1000, 300)]
+    lists_lens = [x for x in range(10, 10000, 1500)]
     bubble_v1_res = []
     bubble_v2_res = []
     bubble_v3_res = []
@@ -21,7 +21,7 @@ def measure_sorts():
     selection_sort_res = []
     shell_sort_res = []
 
-    for x in range(10, 1000, 300):
+    for x in range(10, 10000, 1500):
         unsorted_list = [random.randint(0, x**2) for i in range(x)]
 
         bubble_v1_res.append(bubble_v1(copy.deepcopy(unsorted_list)))
@@ -52,6 +52,7 @@ def measure_sorts():
     plt.xlabel("Velikost vstupu")
     plt.ylabel("Output")
     plt.legend()
+    #plt.yscale("log") #Ověřeni, že ShellSort není konstantní
     plt.show()
 
 measure_sorts()
