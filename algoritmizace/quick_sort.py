@@ -1,13 +1,17 @@
 def partition(left, right, seznam):
+    count = 0
     pivot_index = (left + right)//2
     pivot = seznam[pivot_index]
     i = left
     j = right
     while j >= i:
         while seznam[i] < pivot:
+            count += 1
             i +=1
         while seznam[j] > pivot:
+            count += 1
             j -= 1
+        count += 1
 
         if i <= j:
             temp = seznam[i]
@@ -15,6 +19,7 @@ def partition(left, right, seznam):
             seznam[j] = temp
             i += 1
             j-= 1
+            count += 1
 
     return i
     
