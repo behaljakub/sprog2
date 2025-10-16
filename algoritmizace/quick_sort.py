@@ -13,6 +13,9 @@ def partition(left, right, seznam):
             temp = seznam[i]
             seznam[i] = seznam[j]
             seznam[j] = temp
+            i += 1
+            j-= 1
+
     return i
     
 
@@ -25,7 +28,7 @@ def quick_sort(left, right, seznam):
     return seznam
 
 
-seznam2 = [8, 2, 7, 4, 5, 3, 2, 6, 1]
+seznam2 = [8, 2, 7, 1452, 4, 5, 3, 465, 2, 6, 1, 4, 24, 55, 4, 1, 124, 562, 2]
 
 print(quick_sort(0, len(seznam2) - 1, seznam2))
 
