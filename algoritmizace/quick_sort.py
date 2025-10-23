@@ -1,39 +1,38 @@
 def partition(left, right, seznam, count):
-    pivot_index = (left + right)//2
+    pivot_index = (left + right) // 2
     pivot = seznam[pivot_index]
     i = left
     j = right
-    while j >= i:
+
+    while i <= j:
         while seznam[i] < pivot:
             count += 1
-            i +=1
+            i += 1
+        count += 1  
+
         while seznam[j] > pivot:
             count += 1
             j -= 1
-        count += 1      
-
+        count += 1  
 
         if i <= j:
-            temp = seznam[i]
-            seznam[i] = seznam[j]
-            seznam[j] = temp
-            count += 1
+            seznam[i], seznam[j] = seznam[j], seznam[i]
             i += 1
-            j-= 1
-
+            j -= 1
     return i, count
-    
 
-def quick_sort(left, right, seznam, count = 0):
+
+def _quick_sort(left, right, seznam, count):
     if left < right:
-        i = partition(left, right, seznam)
-        quick_sort(i, right, seznam)
-        quick_sort(left, i - 1, seznam)
-        
-    return seznam, count
+        i, count = partition(left, right, seznam, count)
+        count = _quick_sort(left, i - 1, seznam, count)
+        count = _quick_sort(i, right, seznam, count)
+    return count
 
 
-seznam2 = [8, 2, 7, 1452, 4, 5, 3, 465, 2, 6, 1, 4, 24, 55, 4, 1, 124, 562, 2]
+def quick_sort(seznam):
+    if len(seznam) <= 1:
+        return 0
+    return _quick_sort(0, len(seznam) - 1, seznam, 0)
 
-print(quick_sort(0, len(seznam2) - 1, seznam2))
 
