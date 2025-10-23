@@ -86,5 +86,6 @@ def measure_sorts():
     execution_time = time_end - time_start
 
     print(f"Shell Sort - pocet porovnani: {comparisons}, cas: {execution_time}")
+    
 
 measure_sorts()
