@@ -1,7 +1,3 @@
-import random
-import copy
-import time
-
 def insertion_sort(seznam):
     steps = 0
     for x in range(1, len(seznam)):

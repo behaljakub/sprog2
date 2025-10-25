@@ -8,7 +8,6 @@ from bubble_sortv4 import bubble_v4
 from insert_sort import insertion_sort
 from selection_sort import selection_sort
 from shell_sort import shell_sort
-from quick_sort import quick_sort
 import matplotlib.pyplot as plt
 
 
@@ -21,7 +20,6 @@ def measure_sorts():
     insertion_sort_res = []
     selection_sort_res = []
     shell_sort_res = []
-    quick_sort_res = []
 
     for x in range(10, 10000, 2000):
         unsorted_list = [random.randint(0, x**2) for i in range(x)]
@@ -40,7 +38,6 @@ def measure_sorts():
         
         shell_sort_res.append(shell_sort(copy.deepcopy(unsorted_list)))
 
-        quick_sort_res.append(quick_sort(copy.deepcopy(unsorted_list)))
         
 
 
@@ -51,7 +48,6 @@ def measure_sorts():
     plt.plot(lists_lens, insertion_sort_res, label = "insertion", color="#0400FF")
     plt.plot(lists_lens, selection_sort_res, label = "selection", color="#00C3FF")
     plt.plot(lists_lens, shell_sort_res, label = "shell", color="#00FF9D")
-    plt.plot(lists_lens, quick_sort_res, label = "quick", color="#7700FF")
 
 
     plt.xlabel("Velikost vstupu")
