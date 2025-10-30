@@ -1,6 +1,5 @@
 count = 0
 
-
 def partition(left, right, seznam):
     global count
     pivot_index = (left + right)//2
