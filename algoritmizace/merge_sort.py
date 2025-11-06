@@ -34,7 +34,4 @@ def new_merge(seznam):
     merge_sort(seznam)
     return count
 
-seznam2 = [95, 4, 5, 8, 1, 66, 154, 916, 21, 6, 8]
-print(merge_sort(seznam2))
-print(count)
 

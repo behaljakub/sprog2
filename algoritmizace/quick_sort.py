@@ -38,8 +38,6 @@ def quick_sort(seznam):
     global count
     count = 0
     _quick_sort(0, len(seznam) - 1, seznam)
-    return seznam, count
+    return count
 
-seznam = [12, 32, 1, 3, 66, 2, 6, 5, 232]
-print(quick_sort(seznam))
 

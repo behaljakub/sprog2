@@ -11,4 +11,3 @@ def selection_sort(n):
     return steps
 
 
-
