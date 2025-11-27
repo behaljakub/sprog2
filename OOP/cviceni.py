@@ -8,7 +8,7 @@ class Hrac:
 
     #metody
     def utrzi_zraneni(self, dmg):
-        self.__penize = self.__penize + 20
+        self.__penize = self.__penize + 20 #ukazka zapouzdreni
         self.zivoty -= dmg
 
     def zjisti_penize(self):
