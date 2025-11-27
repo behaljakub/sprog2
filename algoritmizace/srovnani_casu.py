@@ -13,8 +13,8 @@ from merge_sort import new_merge
 
 def measure_sorts():
     unsorted_list = []
-    for i in range(1000):
-        x = random.randint(0, 100)
+    for i in range(100):
+        x = random.randint(0, 10)
         unsorted_list.append(x)
 
     list_copy = copy.deepcopy(unsorted_list)
@@ -109,6 +109,9 @@ def measure_sorts():
     execution_time = time_end - time_start
 
     print(f"Merge Sort - pocet porovnani: {comparisons}, cas: {execution_time}")
+
+    list_copy = copy.deepcopy(unsorted_list)
+
 
 
 
