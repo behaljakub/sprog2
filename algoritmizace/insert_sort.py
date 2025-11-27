@@ -7,6 +7,13 @@ def insertion_sort(seznam):
             steps += 1
             seznam[j + 1] = seznam[j]
             j -= 1
+
         seznam[j + 1] = key
-    return steps
+        print(seznam)      
+    return seznam, steps
+
+seznam = [7, 6, 1, 4, 2, 9, 8]
+print(insertion_sort(seznam))
+
+
 

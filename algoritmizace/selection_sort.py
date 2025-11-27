@@ -8,7 +8,13 @@ def selection_sort(n):
                 min_index = i
         n[x], n[min_index] = n[min_index], n[x]
 
+
     return steps
+
+
+
+
+
 
 
 
