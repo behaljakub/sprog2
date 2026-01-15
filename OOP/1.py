@@ -42,35 +42,5 @@ class zlomek:
         vysledek = zlomek(novy_citatel, novy_jmenovatel)
 
         return vysledek.zkrat()
-    
 
- 
-# Test 1: Vytvoření zlomků
-z1 = zlomek(1, 2)
-z2 = zlomek(3, 4)
-z3 = zlomek(5)
-print(f"z1 = {z1}")  # 1/2
-print(f"z2 = {z2}")  # 3/4
-print(f"z3 = {z3}")  # 5/1
-
-# Test 2: Sčítání
-print(f"{z1} + {z2} = {z1 + z2}")  # 5/4
-
-# Test 3: Odčítání
-print(f"{z2} - {z1} = {z2 - z1}")  # 1/4
-
-# Test 4: Násobení
-print(f"{z1} * {z2} = {z1 * z2}")  # 3/8
-
-# Test 5: Dělení
-print(f"{z1} / {z2} = {z1 / z2}")  # 2/3
-
-# Test 6: Složitější výpočet
-print(f"({z1} + {z2}) * {z3} = {(z1 + z2) * z3}")  # 25/4
-
-# Test 7: Zkracování
-z4 = zlomek(8, 12)
-print(f"Před zkrácením: {z4}")  # 8/12
-z4.zkrat()
-print(f"Po zkrácení: {z4}")    # 2/3
 

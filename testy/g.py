@@ -9,4 +9,3 @@ def nejvetsi_spol_del(cislo, cislo2):
     
 print(nejvetsi_spol_del(48, 18))
 print(nejvetsi_spol_del(252, 105))
-    
