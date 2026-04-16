@@ -1,15 +1,7 @@
-def sito(n):
+def eratosthenovo_sito(n):
     seznam = []
-    for x in range(2, n + 1):
+    for x in range(n):
         seznam.append(x)
 
-
-    for i in seznam:
-        for j in range(i*2, n + 1, i):
-            if j in seznam:
-                seznam.remove(j)
-    
     return seznam
-    
-
-print(sito(20))
+print(eratosthenovo_sito(8))

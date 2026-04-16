@@ -11,5 +11,5 @@ def fib(n):
         cisla[n] = fib(n - 1) + fib(n - 2)
     return cisla[n]
 
-print(fib(3))
+print(fib(10))
 

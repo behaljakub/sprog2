@@ -1,9 +1,9 @@
-def fac(n):
+def faktorial(n):
     if n == 0:
         return 1
     elif n == 1:
         return 1
     else:
-        return n*fac(n-1)
-    
-print(fac(0))
+        return n*faktorial(n-1)
+
+print(faktorial(3))
