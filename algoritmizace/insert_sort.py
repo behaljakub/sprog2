@@ -12,8 +12,7 @@ def insertion_sort(seznam):
         print(seznam)      
     return seznam, steps
 
-seznam = [7, 6, 1, 4, 2, 9, 8]
-print(insertion_sort(seznam))
+
 
 
 

@@ -31,10 +31,4 @@ def quick_sort(left, right, numbers):
         quick_sort(left, mid - 1, numbers)
         quick_sort(mid, right, numbers)
 
-numbers = [12, 32, 1, 3, 66, 2, 6, 5, 232]
-left = 0
-right = len(numbers) - 1
-print(numbers)
-quick_sort(left, right, numbers)
-print(numbers)
-print(count)
+

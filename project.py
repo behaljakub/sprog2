@@ -1,27 +1,12 @@
-import math
+seznam = [2, 8, 9, 1, 3, 4]
 
-class Zlomek:
-    def __init__(self, citatel, jmenovatel=1):
-        self.citatel = citatel
-        self.jmenovatel = jmenovatel
+for x in seznam:
+    for i in range(len(seznam) + 1):
 
-    def __str__(self):
-        return (f"{self.citatel}/{self.jmenovatel}")
-    
-    def zkrat(self):
-        nsd = math.gcd(abs(self.citatel), abs(self.jmenovatel))
-        print(nsd)
-        self.citatel//nsd
-        self.jmenovatel//nsd
-        return self
-    
-z4 = Zlomek(8, 12)
-print(f"Před zkrácením: {z4}")  # 8/12
-z4.zkrat()
-print(f"Po zkrácení: {z4}") 
-    
+        if seznam[x] > seznam[x+1]:
+            seznam[x+1] = seznam[x]
+            seznam[x] = seznam[x+1]
 
-    
-
+print(seznam)
 
 
