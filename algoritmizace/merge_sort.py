@@ -33,3 +33,6 @@ def new_merge(seznam):
     merge_sort(seznam)
     return count
 
+
+
+

@@ -49,13 +49,13 @@ def measure_sorts():
         
 
 
-    #plt.plot(lists_lens, bubble_v1_res, label = "bubbleV1", color="#FF0000")
-    #plt.plot(lists_lens, bubble_v2_res, label = "bubbleV2", color="#A200FF")
-    #plt.plot(lists_lens, bubble_v3_res, label = "bubbleV3", color="#00FF22")
-    #plt.plot(lists_lens, bubble_v4_res, label = "bubbleV4", color="#FFFB00")
-    #plt.plot(lists_lens, insertion_sort_res, label = "insertion", color="#0400FF")
-    #plt.plot(lists_lens, selection_sort_res, label = "selection", color="#00C3FF")
-    #plt.plot(lists_lens, shell_sort_res, label = "shell", color="#00FF9D")
+    plt.plot(lists_lens, bubble_v1_res, label = "bubbleV1", color="#FF0000")
+    plt.plot(lists_lens, bubble_v2_res, label = "bubbleV2", color="#A200FF")
+    plt.plot(lists_lens, bubble_v3_res, label = "bubbleV3", color="#00FF22")
+    plt.plot(lists_lens, bubble_v4_res, label = "bubbleV4", color="#FFFB00")
+    plt.plot(lists_lens, insertion_sort_res, label = "insertion", color="#0400FF")
+    plt.plot(lists_lens, selection_sort_res, label = "selection", color="#00C3FF")
+    plt.plot(lists_lens, shell_sort_res, label = "shell", color="#00FF9D")
     plt.plot(lists_lens, quick_sort_res, label = "quick", color="#70B1FC")
     plt.plot(lists_lens, merge_sort_res, label = "merge", color="#240086")
 
