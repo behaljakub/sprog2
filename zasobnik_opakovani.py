@@ -4,7 +4,6 @@ class Stack:
     
     def push(self, prvek):
         self.seznam.append(prvek)
-        return self.seznam
     
     def pop(self):
         # Odebere a vrátí prvek z vrcholu
