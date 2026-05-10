@@ -1,12 +1,43 @@
-seznam = [2, 8, 9, 1, 3, 4]
+import random
 
-for x in seznam:
-    for i in range(len(seznam) + 1):
+delka = int(input("zadejte delku seznamu: "))
+cisla = []
 
-        if seznam[x] > seznam[x+1]:
-            seznam[x+1] = seznam[x]
-            seznam[x] = seznam[x+1]
+for i in range(delka):
+    cislo = random.randint(1, 100)
+    cisla.append(cislo)
 
-print(seznam)
+print(cisla)
+
+max = cisla[0]
+misto = []
+for x in cisla:
+    if x > max:
+        max = x
+
+print(max)
+
+target = max
+misto = 0
+for x in range(len(cisla)):
+    if cisla[x] == target:
+        misto = x
+
+print(misto)
+
+seznam_bez_indexu = cisla.pop(misto)
+
+print(cisla)
+
+druhy_nejvetsi = cisla[0]
+for x in cisla:
+    if x > druhy_nejvetsi:
+        druhy_nejvetsi = x
+
+print(druhy_nejvetsi)
+
+
+
+
 
 
